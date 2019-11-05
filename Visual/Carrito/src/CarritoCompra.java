@@ -14,15 +14,16 @@ public class CarritoCompra {
     private JTextField txtTotalPrecio;
 
     public static String[] alimento = new String[100];
-    public static Producto[] productos = new Producto[100];
+    public static Producto[] productos = new Producto[77];
 
     private double precioTotalCarrito = 0;
+    private int indice = 0;
+
 
     public void leerCSV() {
 
         String fileName = "productos.csv";
         File file = new File(fileName);
-        int indice = 0;
         try {
             Scanner inputStream = new Scanner(file); // USAMOS EL SCANNER PARA LEER EL CONTENIDO DEL ARCHIVO
             while (inputStream.hasNext()){
