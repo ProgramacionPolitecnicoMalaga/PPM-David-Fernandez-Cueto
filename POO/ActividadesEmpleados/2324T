@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleado>
+  <nombre>Jorge Javier Vázquez</nombre>
+  <actividades>Actividad{descripción='Desarrollo de aplicación', proyecto=Alphasec, duración=20}
+Actividad{descripción='Matenimiento', proyecto=Alphasec, duración=20}
+</actividades>
+</empleado>

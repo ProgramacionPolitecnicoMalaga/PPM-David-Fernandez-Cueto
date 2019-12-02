@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proyectos>
+    <proyecto nombre="Alphasec" departamento="Seguridad" fprod="2.5" duración = "20">Descripción</proyecto>
+    <proyecto nombre="Terminator" departamento="Destrucción" fprod="1.5 " duración = "15">Descripción</proyecto>
+    <proyecto nombre="Exterminio" departamento="Destrucción pero más bestia" fprod="2.0" duración = "40">Descripción</proyecto>
+    <proyecto nombre="Sanación" departamento="Reparación" fprod="3.5" duración = "35">Descripción</proyecto>
+</proyectos>

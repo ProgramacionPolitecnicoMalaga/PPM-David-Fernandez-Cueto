@@ -20,7 +20,9 @@ public class Empleado {
     private Sueldo sueldo;
     private LinkedList<Actividad> actividadesInscritas = new LinkedList<>();
 
-    public Empleado() {}
+
+    public Empleado () {
+    }
 
     public Empleado(String nombreCompleto, String DNI, int categoría, Sueldo sueldo) {
         this.nombreCompleto = nombreCompleto;
@@ -86,14 +88,30 @@ public class Empleado {
 
     public void inscribirseEnActividad(Actividad actividad) {
         actividadesInscritas.add(actividad);
+        setProductividad(actividad.proyecto.getFprod());
+        setHorasPorProyectos(actividad.proyecto.duracionHoras);
     }
 
-    public void getActividadesInscritas () {
+    public String getActividadesInscritas () {
         ListIterator<Actividad> iterador = actividadesInscritas.listIterator();
         System.out.println("Lista de actividades a realizar por " + this.getNombreCompleto());
+        String actividades = "";
         while (iterador.hasNext()) {
-            System.out.println(iterador.next());
+            actividades += iterador.next() + "\n";
         }
+   return actividades; }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "nombreCompleto='" + nombreCompleto + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", categoría=" + categoría +
+                ", productividad=" + productividad +
+                ", horasPorProyectos=" + horasPorProyectos +
+                ", sueldo=" + sueldo +
+                ", actividadesInscritas=" + actividadesInscritas +
+                '}' + "\n";
     }
 }
 
