@@ -6,8 +6,16 @@ public class MainCuaderno {
         Asignatura Programacion = new Asignatura("01", "Programación");
         Asignatura EntornosDeDesarrollo = new Asignatura("02", "Entornos de Desarrollo");
         Asignatura LenguajeDeMarcas = new Asignatura("03", "Lenguaje de Marcas");
+        Asignatura DesarrolloDeDroides = new Asignatura("11", "Desarrollo de Droides");
 
         Curso S11AW = new Curso("S11AW", "Desarrollo de Aplicaciones Web");
+        Curso C3PO = new Curso("C3PO", "Montaje de Droides");
+
+        ListadeCursos cursos = new ListadeCursos();
+        cursos.addCurso(S11AW);
+        cursos.addCurso(C3PO);
+
+        C3PO.addAsignaturaAlCurso(DesarrolloDeDroides);
 
         S11AW.addAsignaturaAlCurso(Programacion);
         S11AW.addAsignaturaAlCurso(EntornosDeDesarrollo);
@@ -25,6 +33,10 @@ public class MainCuaderno {
         Programacion.setIndicadorAlumno(Roberto, new Indicador(Roberto.getNombreCompleto(), Programacion, "Examen trimestral", 6.5));
 
         System.out.println(Programacion.getNotas());
+
+        cursos.escribiXML();
+
+
 
     }
 }
