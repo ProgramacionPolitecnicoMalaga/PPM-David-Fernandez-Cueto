@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cursos>
+    <curso id="S11AW" nombre="Desarrollo de Aplicaciones Web">
+        <asignatura id="01" nombre="Programación"/>
+        <asignatura id="02" nombre="Entornos de Desarrollo"/>
+        <asignatura id="03" nombre="Lenguaje de Marcas"/>
+    </curso>
+    <curso id="C3PO" nombre="Montaje de Droides">
+        <asignatura id="11" nombre="Desarrollo de Droides"/>
+    </curso>
+</cursos>

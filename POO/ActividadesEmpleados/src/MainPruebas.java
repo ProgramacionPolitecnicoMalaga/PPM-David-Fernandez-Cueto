@@ -47,6 +47,8 @@ public class MainPruebas {
 
         System.out.println(listaEmpleados);
 
+        System.out.println(empleado1.getSueldoTotal());
+
 
     }
 }
