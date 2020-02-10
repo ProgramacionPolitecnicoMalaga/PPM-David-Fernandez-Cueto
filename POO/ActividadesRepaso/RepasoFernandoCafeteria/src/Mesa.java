@@ -35,9 +35,19 @@ public class Mesa {
             //productos.remove(producto);
         }
         productos.removeAll(productos);
+        cuenta.setImporteTotal(0);
         cerrada = true;
 
     return cuenta; }
+
+    public String mostrarProductos() {
+        String productosMesa = "";
+        Iterator<Producto> iterator = productos.iterator();
+        while (iterator.hasNext()) {
+            Producto producto = iterator.next();
+            productosMesa+= producto.getNombre() + " Precio:"  + producto.getPrecio() + "\n";
+        }
+    return productosMesa; }
 
     public int getNumeroMesa() {
         return numeroMesa;

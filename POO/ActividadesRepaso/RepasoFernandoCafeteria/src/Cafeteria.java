@@ -15,6 +15,11 @@ public class Cafeteria {
         caja = new Caja();
     }
 
+    public Producto getProductoDeCarta (String nombreProducto) {
+        Producto producto = carta.get(nombreProducto);
+        return producto;
+    }
+
     public void addMesa(int numeroMesa) {
         mesas.put(numeroMesa, new Mesa(numeroMesa));
     }
@@ -80,6 +85,16 @@ public class Cafeteria {
             caja.setCajaTotal(entry.getValue());
         }
     return caja.getImporteCaja(); }
+
+    public String mostrarProductosMesa(int numeroMesa) {
+        Mesa mesa = mesas.get(numeroMesa);
+        return mesa.mostrarProductos();
+    }
+
+    public Mesa getMesa (int numeroMesa) {
+        Mesa mesa = mesas.get(numeroMesa);
+        return mesa;
+    }
 
 
 }
