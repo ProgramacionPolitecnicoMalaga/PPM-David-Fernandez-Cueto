@@ -9,6 +9,14 @@ public class Main {
         listaEmpleados.addEmpleado(new Asalariado("Borja", "Hurón"));
 
         listaEmpleados.generarInforme();
+
+        GeneradorNominas generador = new GeneradorNominas();
+
+
+        // PROBANDO LA COMPOSICIÓN:
+        Empleado empleadoComisionado1 = new Comisionado("Enrique", "Hots", 8);
+
+        System.out.println(generador.generarNomina(empleadoComisionado1));
     }
 
 
