@@ -1,18 +1,18 @@
 public class Cuenta {
 
     Mesa mesa;
-    double importeTotal;
+    double importeCuenta;
 
     public Cuenta (Mesa mesa) {
         this.mesa = mesa;
     }
 
-    public double getImporteTotal() {
-        return importeTotal;
+    public double getImporteCuenta() {
+        return importeCuenta;
     }
 
-    public void setImporteTotal(double importeTotal) {
-        this.importeTotal = importeTotal;
+    public void setImporteCuenta(double importeCuenta) {
+        this.importeCuenta = importeCuenta;
     }
 
 
@@ -21,7 +21,7 @@ public class Cuenta {
     public String toString() {
         return "Cuenta{" +
                 "mesa=" + mesa +
-                ", importeTotal=" + importeTotal +
+                ", importeTotal=" + importeCuenta +
                 '}';
     }
 

@@ -17,7 +17,7 @@ public class Mesa {
 
     public void addProducto (Producto producto) {
         productos.add(producto);
-        cuenta.setImporteTotal(cuenta.getImporteTotal() + producto.getPrecio());
+        cuenta.setImporteCuenta(cuenta.getImporteCuenta() + producto.getPrecio());
         cerrada = false;
     }
 
@@ -26,19 +26,19 @@ public class Mesa {
 
     public Cuenta cobrarMesa () {
         Iterator<Producto> iterator = productos.iterator();
-        cuenta.setImporteTotal(0);
+        cuenta.setImporteCuenta(0);
         Producto producto;
 
         while (iterator.hasNext()) {
             producto = iterator.next();
-            cuenta.setImporteTotal(cuenta.getImporteTotal() + producto.getPrecio());
+            cuenta.setImporteCuenta(cuenta.getImporteCuenta() + producto.getPrecio());
             //productos.remove(producto);
         }
         productos.removeAll(productos);
-        cuenta.setImporteTotal(0);
         cerrada = true;
 
-    return cuenta; }
+        return cuenta;
+    }
 
     public String mostrarProductos() {
         String productosMesa = "";

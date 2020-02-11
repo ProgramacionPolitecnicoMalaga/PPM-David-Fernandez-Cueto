@@ -65,8 +65,9 @@ public class Cafeteria {
 
     public Cuenta cobrarMesa(int numeroMesa) {
         Mesa mesa = mesas.get(numeroMesa);
-        caja.setCajaTotal(mesa);
-        return mesa.cobrarMesa();
+        Cuenta cuentaMesa = mesa.cobrarMesa();
+        caja.addCuenta(cuentaMesa);
+        return cuentaMesa;
     }
 
     public double getCaja() {
@@ -74,7 +75,7 @@ public class Cafeteria {
     }
 
     public double cerrarCaja() {
-        double cajaTotal = caja.getImporteCaja();
+        double cajaTotal = caja.setCajaTotal();
         caja.resetCaja();
     return cajaTotal; }
 
@@ -84,12 +85,12 @@ public class Cafeteria {
         return mesas;
     }
 
-    public double getCantidadTotal() {
+   /* public double getCantidadTotal() {
         Caja caja = new Caja();
         for (Map.Entry<Integer, Mesa> entry : mesas.entrySet()) {
             caja.setCajaTotal(entry.getValue());
         }
-    return caja.getImporteCaja(); }
+    return caja.getImporteCaja(); } */
 
     public String mostrarProductosMesa(int numeroMesa) {
         Mesa mesa = mesas.get(numeroMesa);

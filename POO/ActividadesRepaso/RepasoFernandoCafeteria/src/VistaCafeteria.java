@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class VistaCafeteria {
     private JTextArea txtProductos;
@@ -57,7 +56,7 @@ public class VistaCafeteria {
         txtImporte.setText("");
         String productos = cafeteria.mostrarProductosMesa(numeromesa);
         txtProductos.append(productos);
-        txtImporte.setText(Double.toString(cafeteria.getCuentaMesa(numeromesa).getImporteTotal()));
+        txtImporte.setText(Double.toString(cafeteria.getCuentaMesa(numeromesa).getImporteCuenta()));
     }
 
 
@@ -104,7 +103,7 @@ public class VistaCafeteria {
         butCobrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                double importe = mesa.getCuenta().getImporteTotal();
+                double importe = mesa.getCuenta().getImporteCuenta();
                 cafeteria.cobrarMesa(mesa.getNumeroMesa());
                 txtProductos.setText("Importe cobrado de mesa " + mesa.getNumeroMesa() + "\n" + "Total: " + importe);
             }

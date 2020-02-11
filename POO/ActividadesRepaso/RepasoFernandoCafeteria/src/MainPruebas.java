@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Main {
+public class MainPruebas {
 
     private static Cafeteria cafeteria = new Cafeteria();
 
@@ -37,7 +37,7 @@ public class Main {
 
 
         //CANTIDAD TOTAL A PESAR DE NO HABER SIDO COBRADO.
-        System.out.println(cafeteria.getCantidadTotal());
+        //System.out.println(cafeteria.getCantidadTotal());
 
         /*
 
