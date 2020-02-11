@@ -22,6 +22,8 @@ public class VistaCafeteria {
     private JComboBox comboProductos;
     private JButton butAnotar;
     private JTextField txtImporte;
+    private JButton cerrarCajaButton;
+    private JTextField txtCaja;
 
     private static Cafeteria cafeteria = new Cafeteria();
 
@@ -115,6 +117,13 @@ public class VistaCafeteria {
                 Producto producto = cafeteria.getProductoDeCarta(productoSeleccionado);
                 mesa.addProducto(producto);
                 imprimirTxtProductos(mesa.getNumeroMesa());
+            }
+        });
+        cerrarCajaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                double cajaTotal = cafeteria.cerrarCaja();
+                txtCaja.setText("Caja total: "+ String.valueOf(cajaTotal));
             }
         });
     }

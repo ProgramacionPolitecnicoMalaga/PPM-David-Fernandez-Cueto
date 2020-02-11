@@ -19,6 +19,10 @@ public class Caja {
         cajaTotal = cajaTotal + mesa.getCuenta().getImporteTotal();
     }
 
+    public void resetCaja() {
+        cajaTotal = 0;
+    }
+
     public void addCuentas(Mesa mesa) {
         cuentas.add(mesa.getCuenta());
     }

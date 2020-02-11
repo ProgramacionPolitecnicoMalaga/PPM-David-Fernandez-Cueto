@@ -73,6 +73,11 @@ public class Cafeteria {
         return caja.getImporteCaja();
     }
 
+    public double cerrarCaja() {
+        double cajaTotal = caja.getImporteCaja();
+        caja.resetCaja();
+    return cajaTotal; }
+
 
 
     public TreeMap<Integer, Mesa> getMesas() {
