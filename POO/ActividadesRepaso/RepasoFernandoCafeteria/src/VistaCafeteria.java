@@ -17,12 +17,15 @@ public class VistaCafeteria {
     private JButton butMesa12;
     private JButton butMesa5;
     private JPanel panelMain;
+    private JPanel panelMesasAbiertas;
     private JButton butCobrar;
     private JComboBox comboProductos;
     private JButton butAnotar;
     private JTextField txtImporte;
     private JButton cerrarCajaButton;
     private JTextField txtCaja;
+    private JButton butMesasAbiertas;
+    private MesasAbiertas ventanaMesas;
 
     private static Cafeteria cafeteria = new Cafeteria();
 
@@ -123,6 +126,12 @@ public class VistaCafeteria {
             public void actionPerformed(ActionEvent actionEvent) {
                 double cajaTotal = cafeteria.cerrarCaja();
                 txtCaja.setText("Caja total: "+ String.valueOf(cajaTotal));
+            }
+        });
+        butMesasAbiertas.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+              ventanaMesas = new MesasAbiertas();
             }
         });
     }
